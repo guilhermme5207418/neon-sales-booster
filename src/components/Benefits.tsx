@@ -1,4 +1,3 @@
-
 const Benefits = () => {
   const benefits = [
     {
@@ -28,17 +27,18 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-20 px-4 relative">
+    <section className="relative py-24 px-4 bg-gradient-to-b from-gray-900/50 via-gray-800 to-gray-900/50">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-green-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-green-400/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent uppercase">
+          Por Que Escolher O Pack Dominação Digital?
+        </h2>
+        
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
-            Benefícios que vão transformar seu negócio
-          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Descubra como este pack vai acelerar seus resultados e economizar meses de trabalho
           </p>
@@ -107,6 +107,9 @@ const Benefits = () => {
           </div>
         </div>
       </div>
+
+      {/* Gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-black"></div>
     </section>
   );
 };

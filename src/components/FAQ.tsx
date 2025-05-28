@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 const FAQ = () => {
@@ -32,17 +31,11 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 px-4 relative">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
-            Perguntas Frequentes
-          </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Tire suas principais dúvidas sobre o Pack Dominação Digital
-          </p>
-        </div>
-
+    <section className="relative py-24 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent uppercase">
+          Perguntas Frequentes
+        </h2>
         <div className="space-y-6">
           {faqs.map((faq, index) => (
             <div
@@ -73,6 +66,7 @@ const FAQ = () => {
           ))}
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-900/50"></div>
     </section>
   );
 };

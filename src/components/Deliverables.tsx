@@ -1,103 +1,135 @@
-
 import CTAButton from "./CTAButton";
 
 const Deliverables = () => {
   const mainDeliverables = [
-    { icon: "📚", title: "Mais de 200 PLR's", description: "Produtos com direito de revenda para monetizar imediatamente" },
-    { icon: "🎯", title: "54 modelos de landing page", description: "Páginas de alta conversão prontas para usar" },
-    { icon: "🎨", title: "Mais de 2.000 criativos validados", description: "Imagens e vídeos testados e aprovados" },
-    { icon: "💰", title: "Modelos de presells premium", description: "Estruturas que vendem antes mesmo do produto" },
-    { icon: "🔧", title: "Plugin clonador de páginas", description: "Clone qualquer página de sucesso em segundos" },
-    { icon: "⭐", title: "Plugins Premium", description: "Ferramentas avançadas para WordPress" },
-    { icon: "🖼️", title: "Pacote de imagens PNG", description: "Banco de imagens profissionais" },
-    { icon: "✍️", title: "Estruturas de copy", description: "Templates de textos que convertem" },
-    { icon: "👥", title: "Guia para estudo de persona", description: "Entenda seu público-alvo como nunca" },
-    { icon: "❌", title: "Lista de palavras negativas", description: "Otimize seus anúncios com exclusões certeiras" }
+    {
+      icon: "🚀",
+      title: "Templates de Landing Pages",
+      description: "Páginas de alta conversão para você divulgar seus produtos e serviços."
+    },
+    {
+      icon: "🎨",
+      title: "Pacote de Criativos",
+      description: "Artes prontas para usar nas suas redes sociais e anúncios online."
+    },
+    {
+      icon: "📚",
+      title: "E-books e Guias",
+      description: "Conteúdo estratégico para atrair e educar seus clientes."
+    },
+    {
+      icon: "📊",
+      title: "Planilhas de Controle",
+      description: "Organize suas finanças e acompanhe seus resultados de forma eficiente."
+    },
+    {
+      icon: "📧",
+      title: "Templates de E-mail Marketing",
+      description: "Sequências de e-mails persuasivos para nutrir seus leads e aumentar suas vendas."
+    },
+    {
+      icon: "🤖",
+      title: "Chatbots",
+      description: "Automatize o atendimento ao cliente e economize tempo."
+    },
   ];
 
   const bonusDeliverables = [
-    { icon: "🎨", title: "Elementor Pro", description: "Plugin premium para criar páginas incríveis" },
-    { icon: "📋", title: "Checklist Business Manager", description: "Organize toda sua operação digital" },
-    { icon: "🔥", title: "Esteira de aquecimento", description: "Para contas de anúncio performarem melhor" }
+    {
+      icon: "🎁",
+      title: "Pack de Presets",
+      description: "Edite suas fotos com qualidade profissional em poucos cliques."
+    },
+    {
+      icon: "🎬",
+      title: "Templates de Vídeos",
+      description: "Crie vídeos incríveis para o YouTube, Instagram e TikTok."
+    },
+    {
+      icon: "💎",
+      title: "Banco de Imagens Premium",
+      description: "Tenha acesso a milhares de imagens de alta resolução para seus projetos."
+    },
   ];
 
   return (
-    <section className="py-24 px-4 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
-            O que está incluso no Pack
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Mais de <span className="text-green-400 font-bold">15 ferramentas e arquivos</span> que normalmente custariam milhares de reais separadamente
-          </p>
-        </div>
+    <section className="relative py-24 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-green-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-green-400/5 rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent uppercase">
+          Você Recebe Tudo Isso:
+        </h2>
+        
+        <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
+          Mais de <span className="text-green-400 font-bold">15 ferramentas profissionais</span> que vão transformar sua operação digital
+        </p>
 
         {/* Main Deliverables */}
-        <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-16 text-green-400">
-            🎯 Entregáveis Principais
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mainDeliverables.map((item, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-900 to-black border border-green-500/30 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h4 className="text-xl font-bold mb-4 text-white">{item.title}</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
-                <div className="mt-6 w-full h-1 bg-green-500/30 rounded"></div>
-              </div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {mainDeliverables.map((item, index) => (
+            <div key={index} className="bg-gray-900/50 border border-green-500/20 rounded-2xl p-6 text-center hover:border-green-500/40 transition-all duration-300 hover:scale-105">
+              <div className="text-4xl mb-4">{item.icon}</div>
+              <h3 className="text-xl font-bold text-white mb-3 uppercase">{item.title}</h3>
+              <p className="text-gray-400 leading-relaxed">{item.description}</p>
+            </div>
+          ))}
         </div>
 
-        {/* Enhanced Bonus Section */}
-        <div className="relative mb-16">
-          {/* Background Effects for Bonus */}
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-green-400/30 to-green-500/20 rounded-3xl blur-xl"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-green-400/10 border-2 border-green-500/60 rounded-3xl shadow-2xl shadow-green-500/30"></div>
-          
-          <div className="relative z-10 p-12">
+        {/* Bonus Section with Enhanced Design */}
+        <div className="mt-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-green-400/5 to-green-500/10 rounded-3xl blur-xl"></div>
+          <div className="relative bg-gradient-to-r from-gray-900/80 via-gray-800/80 to-gray-900/80 border-2 border-green-500/50 rounded-3xl p-12">
             <div className="text-center mb-12">
-              <div className="inline-block bg-gradient-to-r from-green-500 to-green-400 text-black font-bold px-8 py-4 rounded-full text-xl mb-6 animate-pulse">
+              <div className="inline-block bg-gradient-to-r from-green-500 to-green-400 text-black font-bold px-8 py-3 rounded-full text-lg mb-6 animate-pulse-soft">
                 🎁 BÔNUS EXCLUSIVOS
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Receba Também Estes Bônus Incríveis
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase">
+                E Ainda Leva De Brinde
               </h3>
-              <p className="text-xl text-green-300 font-semibold">
-                Valor adicional de R$ 497,00 - GRÁTIS por tempo limitado!
+              <p className="text-xl text-green-400 font-bold">
+                Valor adicional de R$ 197,00 - TOTALMENTE GRÁTIS!
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               {bonusDeliverables.map((item, index) => (
-                <div key={index} className="bg-black/70 border-2 border-green-500/50 rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300 shadow-lg shadow-green-500/20">
-                  <div className="text-5xl mb-6">{item.icon}</div>
-                  <h4 className="text-xl font-bold mb-4 text-green-400">{item.title}</h4>
-                  <p className="text-gray-300">{item.description}</p>
-                  <div className="mt-6 w-full h-2 bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
+                <div key={index} className="bg-black/50 border border-green-500/30 rounded-2xl p-6 text-center hover:border-green-500/60 transition-all duration-300 hover:scale-105">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                  <p className="text-gray-400 leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
+
+            <div className="text-center mt-12">
+              <div className="inline-block bg-gradient-to-r from-yellow-500/20 to-yellow-400/20 border border-yellow-500/50 rounded-2xl px-8 py-4">
+                <p className="text-yellow-400 font-bold text-lg">
+                  ⚡ Acesso vitalício a todos os bônus sem custo adicional
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Value Proposition */}
-        <div className="text-center bg-gradient-to-br from-gray-900 to-black border border-green-500/30 rounded-2xl p-10">
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
-            Valor real deste pack: <span className="text-red-400 line-through">R$ 297,00</span>
+        {/* CTA Section */}
+        <div className="text-center mt-24">
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase">
+            Não Perca Essa Oportunidade!
           </h3>
-          <h4 className="text-3xl md:text-4xl font-bold text-green-400 mb-8">
-            Seu investimento hoje: R$ 19,90
-          </h4>
-          <p className="text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Economize mais de R$ 277 e tenha acesso a tudo que precisa para dominar o marketing digital
+          <p className="text-xl text-gray-300 mb-12">
+            Adquira agora o Pack Dominação Digital e comece a transformar seus resultados.
           </p>
           <CTAButton size="large" />
         </div>
       </div>
+
+      {/* Gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-900/50"></div>
     </section>
   );
 };
