@@ -11,13 +11,6 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
-        {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12 bg-gradient-to-r from-white via-green-100 to-green-400 bg-clip-text text-transparent leading-tight uppercase">
-          Por tempo limitado, acesse agora o
-          <span className="block text-green-400 drop-shadow-lg">Pack mais poderoso</span>
-          para vender todos os dias no digital
-        </h1>
-
         {/* VSL Video */}
         <div className="mb-12">
           <div className="relative max-w-4xl mx-auto">
@@ -32,6 +25,13 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* Main Headline */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-green-100 to-green-400 bg-clip-text text-transparent leading-tight">
+          Por tempo limitado, acesse agora o
+          <span className="block text-green-400 drop-shadow-lg">Pack mais poderoso</span>
+          para vender todos os dias no digital
+        </h1>
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
@@ -73,9 +73,6 @@ const Hero = () => {
       {/* Decorative Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 border border-green-500/30 rounded-full animate-spin-slow"></div>
       <div className="absolute bottom-10 right-10 w-16 h-16 border border-green-400/20 rounded-full animate-ping"></div>
-
-      {/* Gradient transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-900/50"></div>
     </header>
   );
 };
