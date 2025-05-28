@@ -121,6 +121,9 @@ export default {
 				'fade-in': 'fade-in 0.3s ease-out',
 				'scale-in': 'scale-in 0.2s ease-out',
 				'spin-slow': 'spin-slow 20s linear infinite'
+			},
+			scale: {
+				'102': '1.02'
 			}
 		}
 	},
