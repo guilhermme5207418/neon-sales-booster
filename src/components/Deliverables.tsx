@@ -1,4 +1,3 @@
-
 import CTAButton from "./CTAButton";
 
 const Deliverables = () => {
@@ -67,7 +66,7 @@ const Deliverables = () => {
                 Receba Também Estes Bônus Incríveis
               </h3>
               <p className="text-xl text-green-300 font-semibold">
-                Valor adicional de R$ 497,00 - GRÁTIS por tempo limitado!
+                Valor adicional de R$ 197,00 - GRÁTIS por tempo limitado!
               </p>
             </div>
             
