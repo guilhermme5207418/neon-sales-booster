@@ -1,3 +1,4 @@
+
 import CTAButton from "./CTAButton";
 
 const Deliverables = () => {
@@ -61,7 +62,7 @@ const Deliverables = () => {
           
           <div className="relative z-10 p-6 md:p-12">
             <div className="text-center mb-8 md:mb-12">
-              <div className="inline-block bg-gradient-to-r from-green-500 to-green-400 text-black font-bold px-4 py-2 md:px-8 md:py-4 rounded-full text-sm md:text-xl mb-4 md:mb-6 animate-pulse">
+              <div className="inline-block bg-gradient-to-r from-green-500 to-green-400 text-black font-bold px-4 py-2 md:px-8 md:py-4 rounded-full text-sm md:text-xl mb-4 md:mb-6">
                 🎁 BÔNUS EXCLUSIVOS
               </div>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 px-2">
@@ -97,13 +98,6 @@ const Deliverables = () => {
             Economize mais de R$ 277 e tenha acesso a tudo que precisa para dominar o marketing digital
           </p>
           <CTAButton size="large" />
-        </div>
-
-        {/* Final Dynamic Element */}
-        <div className="text-center mt-8 md:mt-12">
-          <div className="inline-block bg-gradient-to-r from-red-600/20 to-red-500/20 border border-red-500/50 rounded-full px-4 py-2 animate-bounce">
-            <span className="text-red-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
-          </div>
         </div>
       </div>
     </section>
