@@ -7,14 +7,12 @@ import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import DynamicTimerBanner from "@/components/DynamicTimerBanner";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Hero />
       <Deliverables />
-      <DynamicTimerBanner />
       <ProductDescription />
       <Benefits />
       <SocialProof />
