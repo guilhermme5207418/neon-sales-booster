@@ -15,8 +15,8 @@ const CTAButton = ({ size = "default", className }: CTAButtonProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-block bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black font-bold rounded-full transition-all duration-500 ease-out hover:scale-102 hover:shadow-lg hover:shadow-green-500/25",
-        size === "large" ? "px-12 py-6 text-xl md:text-2xl" : "px-8 py-4 text-lg",
+        "inline-block bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black font-bold rounded-full transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 animate-pulse shadow-lg shadow-green-500/30",
+        size === "large" ? "px-8 py-4 md:px-12 md:py-6 text-lg md:text-xl lg:text-2xl" : "px-6 py-3 md:px-8 md:py-4 text-base md:text-lg",
         className
       )}
     >
