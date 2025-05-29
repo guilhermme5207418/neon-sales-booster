@@ -28,6 +28,13 @@ const Deliverables = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Dynamic Element */}
+        <div className="text-center mb-6 md:mb-8">
+          <div className="inline-block bg-gradient-to-r from-green-600/20 to-green-500/20 border border-green-500/50 rounded-full px-4 py-2 animate-bounce">
+            <span className="text-green-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
+          </div>
+        </div>
+
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent px-2">
             O que está incluso no Pack
@@ -51,6 +58,13 @@ const Deliverables = () => {
                 <div className="mt-4 md:mt-6 w-full h-1 bg-green-500/30 rounded"></div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Dynamic Element Between Sections */}
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-block bg-gradient-to-r from-red-600/20 to-red-500/20 border border-red-500/50 rounded-full px-4 py-2 animate-pulse">
+            <span className="text-red-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
           </div>
         </div>
 
@@ -98,6 +112,13 @@ const Deliverables = () => {
             Economize mais de R$ 277 e tenha acesso a tudo que precisa para dominar o marketing digital
           </p>
           <CTAButton size="large" />
+        </div>
+
+        {/* Final Dynamic Element */}
+        <div className="text-center mt-8 md:mt-12">
+          <div className="inline-block bg-gradient-to-r from-green-600/20 to-green-500/20 border border-green-500/50 rounded-full px-4 py-2 animate-bounce">
+            <span className="text-green-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
+          </div>
         </div>
       </div>
     </section>

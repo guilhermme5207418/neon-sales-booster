@@ -12,21 +12,21 @@ const Hero = () => {
 
       {/* Floating Limited Time Offer */}
       <div className="absolute top-4 right-4 z-20">
-        <div className="bg-gradient-to-r from-red-600 to-red-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold animate-pulse shadow-lg">
+        <div className="bg-gradient-to-r from-red-600 to-red-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold animate-bounce shadow-lg">
           ⏰ Oferta por tempo limitado
         </div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-3 md:px-4 text-center">
         {/* Main Headline */}
-        <h1 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-green-100 to-green-400 bg-clip-text text-transparent leading-tight px-2">
-          Acesse as ferramentas utilizadas pelos
-          <span className="block text-green-400 drop-shadow-lg">grandes players do digital!</span>
+        <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-green-100 to-green-400 bg-clip-text text-transparent leading-tight px-2">
+          Por tempo limitado, acesse agora o
+          <span className="block text-green-400 drop-shadow-lg">Pack mais poderoso para vender todos os dias no digital!</span>
         </h1>
 
         {/* VSL Video */}
         <div className="mb-6 md:mb-8">
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-3xl mx-auto">
             <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg md:rounded-2xl border border-green-500/30 md:border-2 shadow-2xl shadow-green-500/20">
               <iframe
                 src="https://www.youtube.com/embed/O6VRE0rxrBo"
@@ -42,11 +42,11 @@ const Hero = () => {
         {/* Price Highlight */}
         <div className="mb-6 md:mb-8">
           <div className="inline-block bg-gradient-to-r from-green-500/20 to-green-400/20 border border-green-500/50 rounded-xl md:rounded-2xl p-4 md:p-6">
-            <div className="text-gray-400 text-sm md:text-lg line-through mb-1 md:mb-2">De R$ 297,00</div>
-            <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-green-400 mb-1 md:mb-2">
+            <div className="text-gray-400 text-sm md:text-base line-through mb-1 md:mb-2">De R$ 297,00</div>
+            <div className="text-xl md:text-3xl lg:text-4xl font-bold text-green-400 mb-1 md:mb-2">
               POR APENAS <span className="text-white">R$ 19,90</span>
             </div>
-            <div className="text-green-300 font-semibold text-sm md:text-base">🔥 Desconto de 93% OFF</div>
+            <div className="text-green-300 font-semibold text-xs md:text-sm">🔥 Desconto de 93% OFF</div>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ const Hero = () => {
         <CTAButton size="large" className="mb-6 md:mb-8" />
 
         {/* Subheadline */}
-        <p className="text-base md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-10 max-w-4xl mx-auto leading-relaxed px-2">
+        <p className="text-sm md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed px-2">
           Você não precisa começar do zero. <span className="text-green-400 font-bold">Use o que já funciona</span> e acelere seus resultados com +15 ferramentas prontas!
         </p>
 

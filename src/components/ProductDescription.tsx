@@ -8,8 +8,8 @@ const ProductDescription = () => {
       <div className="max-w-6xl mx-auto">
         {/* Floating Limited Time Banner */}
         <div className="text-center mb-6 md:mb-8">
-          <div className="inline-block bg-gradient-to-r from-red-600/20 to-red-500/20 border border-red-500/50 rounded-full px-4 py-2 animate-bounce">
-            <span className="text-red-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
+          <div className="inline-block bg-gradient-to-r from-green-600/20 to-green-500/20 border border-green-500/50 rounded-full px-4 py-2 animate-bounce">
+            <span className="text-green-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
           </div>
         </div>
 
@@ -67,6 +67,13 @@ const ProductDescription = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Additional Dynamic Element */}
+        <div className="text-center mt-12 md:mt-16">
+          <div className="inline-block bg-gradient-to-r from-red-600/20 to-red-500/20 border border-red-500/50 rounded-full px-4 py-2 animate-pulse">
+            <span className="text-red-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
           </div>
         </div>
       </div>
