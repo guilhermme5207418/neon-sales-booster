@@ -1,4 +1,3 @@
-
 const ProductDescription = () => {
   return (
     <section className="py-12 md:py-20 px-3 md:px-4 relative">
@@ -6,13 +5,6 @@ const ProductDescription = () => {
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent"></div>
       
       <div className="max-w-6xl mx-auto">
-        {/* Floating Limited Time Banner */}
-        <div className="text-center mb-6 md:mb-8">
-          <div className="inline-block bg-gradient-to-r from-green-600/20 to-green-500/20 border border-green-500/50 rounded-full px-4 py-2 animate-bounce">
-            <span className="text-green-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
-          </div>
-        </div>
-
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent px-2">
             Até quando vai gastar seu tempo sem precisar?
@@ -67,13 +59,6 @@ const ProductDescription = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Additional Dynamic Element */}
-        <div className="text-center mt-12 md:mt-16">
-          <div className="inline-block bg-gradient-to-r from-red-600/20 to-red-500/20 border border-red-500/50 rounded-full px-4 py-2 animate-pulse">
-            <span className="text-red-400 font-bold text-sm md:text-base">⏰ Oferta por tempo limitado</span>
           </div>
         </div>
       </div>

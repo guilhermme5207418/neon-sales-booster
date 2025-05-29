@@ -17,11 +17,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-3 md:px-4 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-3 md:px-4 text-center pt-16 md:pt-24">
         {/* Main Headline */}
         <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-green-100 to-green-400 bg-clip-text text-transparent leading-tight px-2">
-          Por tempo limitado, acesse agora o
-          <span className="block text-green-400 drop-shadow-lg">Pack mais poderoso para vender todos os dias no digital!</span>
+          Acesse as ferramentas utilizadas pelos
+          <span className="block text-green-400 drop-shadow-lg">grandes players do digital!</span>
         </h1>
 
         {/* VSL Video */}
