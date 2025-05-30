@@ -5,796 +5,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pack Dominação Digital - Ferramentas dos Grandes Players</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .container-lg {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .text-center { text-align: center; }
-        .text-left { text-align: left; }
-        
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-6 { margin-bottom: 1.5rem; }
-        .mb-8 { margin-bottom: 2rem; }
-        .mb-12 { margin-bottom: 3rem; }
-        .mb-16 { margin-bottom: 4rem; }
-        .mb-20 { margin-bottom: 5rem; }
-        
-        .py-12 { padding: 3rem 0; }
-        .py-16 { padding: 4rem 0; }
-        .py-20 { padding: 5rem 0; }
-        .py-24 { padding: 6rem 0; }
-        
-        .px-2 { padding: 0 0.5rem; }
-        .px-4 { padding: 0 1rem; }
-        .px-6 { padding: 0 1.5rem; }
-        .px-8 { padding: 0 2rem; }
-        
-        .p-4 { padding: 1rem; }
-        .p-6 { padding: 1.5rem; }
-        .p-8 { padding: 2rem; }
-        .p-10 { padding: 2.5rem; }
-        .p-12 { padding: 3rem; }
-        
-        .grid {
-            display: grid;
-            gap: 2rem;
-        }
-        
-        .grid-cols-1 { grid-template-columns: 1fr; }
-        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-        
-        @media (min-width: 768px) {
-            .md\\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-            .md\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-            .md\\:text-3xl { font-size: 1.875rem; }
-            .md\\:text-4xl { font-size: 2.25rem; }
-            .md\\:text-5xl { font-size: 3rem; }
-            .md\\:py-24 { padding: 6rem 0; }
-            .md\\:px-4 { padding: 0 1rem; }
-        }
-        
-        @media (min-width: 1024px) {
-            .lg\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-            .lg\\:text-4xl { font-size: 2.25rem; }
-            .lg\\:text-5xl { font-size: 3rem; }
-        }
-        
-        .text-sm { font-size: 0.875rem; }
-        .text-base { font-size: 1rem; }
-        .text-lg { font-size: 1.125rem; }
-        .text-xl { font-size: 1.25rem; }
-        .text-2xl { font-size: 1.5rem; }
-        .text-3xl { font-size: 1.875rem; }
-        .text-4xl { font-size: 2.25rem; }
-        .text-5xl { font-size: 3rem; }
-        .text-6xl { font-size: 3.75rem; }
-        .text-7xl { font-size: 4.5rem; }
-        
-        .font-bold { font-weight: 700; }
-        .font-semibold { font-weight: 600; }
-        
-        .text-white { color: #fff; }
-        .text-gray-300 { color: #d1d5db; }
-        .text-gray-400 { color: #9ca3af; }
-        .text-gray-600 { color: #6b7280; }
-        .text-green-300 { color: #86efac; }
-        .text-green-400 { color: #4ade80; }
-        .text-red-400 { color: #f87171; }
-        .text-black { color: #000; }
-        
-        .bg-black { background: #000; }
-        .bg-gray-900 { background: #111827; }
-        
-        .border { border: 1px solid; }
-        .border-green-500 { border-color: #10b981; }
-        .border-green-400 { border-color: #4ade80; }
-        .border-gray-700 { border-color: #374151; }
-        
-        .rounded { border-radius: 0.25rem; }
-        .rounded-lg { border-radius: 0.5rem; }
-        .rounded-xl { border-radius: 0.75rem; }
-        .rounded-2xl { border-radius: 1rem; }
-        .rounded-3xl { border-radius: 1.5rem; }
-        .rounded-full { border-radius: 9999px; }
-        
-        .relative { position: relative; }
-        .absolute { position: absolute; }
-        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-        
-        .z-10 { z-index: 10; }
-        .z-20 { z-index: 20; }
-        
-        .flex { display: flex; }
-        .inline-block { display: inline-block; }
-        .block { display: block; }
-        
-        .items-center { align-items: center; }
-        .justify-center { justify-content: center; }
-        .justify-between { justify-content: space-between; }
-        
-        .gap-2 { gap: 0.5rem; }
-        .gap-3 { gap: 0.75rem; }
-        .gap-4 { gap: 1rem; }
-        .gap-6 { gap: 1.5rem; }
-        .gap-8 { gap: 2rem; }
-        
-        .w-full { width: 100%; }
-        .h-full { height: 100%; }
-        .min-h-screen { min-height: 100vh; }
-        
-        .leading-relaxed { line-height: 1.625; }
-        .leading-tight { line-height: 1.25; }
-        
-        .gradient-text {
-            background: linear-gradient(to right, #fff, #4ade80);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
-        
-        .gradient-bg-green {
-            background: linear-gradient(to right, #10b981, #4ade80);
-        }
-        
-        .gradient-bg-card {
-            background: linear-gradient(to bottom right, #111827, #000);
-        }
-        
-        .gradient-border {
-            border: 1px solid;
-            border-image: linear-gradient(to right, #10b981, #4ade80) 1;
-        }
-        
-        .shadow-lg {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        
-        .shadow-green {
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
-        }
-        
-        .transition {
-            transition: all 0.3s ease;
-        }
-        
-        .hover\\:scale-105:hover {
-            transform: scale(1.05);
-        }
-        
-        .hover\\:bg-green-600:hover {
-            background: #059669;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(to right, #10b981, #4ade80);
-            color: #000;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 9999px;
-            box-shadow: 0 4px 6px rgba(16, 185, 129, 0.25);
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background: linear-gradient(to right, #059669, #10b981);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(16, 185, 129, 0.4);
-        }
-        
-        .cta-large {
-            padding: 1rem 2rem;
-            font-size: 1.125rem;
-        }
-        
-        .cta-default {
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-        }
-        
-        .hero-bg {
-            background: linear-gradient(to bottom right, #000, #111827, #000);
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-        
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 80px;
-            left: 80px;
-            width: 384px;
-            height: 384px;
-            background: rgba(16, 185, 129, 0.1);
-            border-radius: 50%;
-            filter: blur(60px);
-            animation: pulse 2s infinite;
-        }
-        
-        .hero-bg::after {
-            content: '';
-            position: absolute;
-            bottom: 80px;
-            right: 80px;
-            width: 320px;
-            height: 320px;
-            background: rgba(74, 222, 128, 0.05);
-            border-radius: 50%;
-            filter: blur(60px);
-            animation: pulse 2s infinite 1s;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .animate-bounce {
-            animation: bounce 1s infinite;
-        }
-        
-        .animate-pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        .animate-spin {
-            animation: spin 20s linear infinite;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 1rem;
-            border: 2px solid rgba(16, 185, 129, 0.3);
-            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.2);
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .faq-item {
-            background: linear-gradient(to bottom right, #111827, #000);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 0.75rem;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-item:hover {
-            border-color: rgba(16, 185, 129, 0.5);
-        }
-        
-        .faq-question {
-            width: 100%;
-            text-align: left;
-            padding: 2rem;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.125rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 0 2rem 2rem;
-            color: #d1d5db;
-            line-height: 1.625;
-        }
-        
-        .faq-toggle {
-            color: #4ade80;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .line-through {
-            text-decoration: line-through;
-        }
-        
-        .decorative-circle {
-            position: absolute;
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 50%;
-            animation: spin 20s linear infinite;
-        }
-        
-        .decorative-circle-1 {
-            top: 40px;
-            left: 40px;
-            width: 80px;
-            height: 80px;
-        }
-        
-        .decorative-circle-2 {
-            bottom: 40px;
-            right: 40px;
-            width: 64px;
-            height: 64px;
-            animation: pulse 2s infinite;
-        }
-        
-        .stats-card {
-            background: linear-gradient(to bottom right, #111827, #000);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 0.75rem;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .stats-card:hover {
-            border-color: rgba(16, 185, 129, 0.5);
-        }
-        
-        .deliverable-card {
-            background: linear-gradient(to bottom right, #111827, #000);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .deliverable-card:hover {
-            border-color: rgba(16, 185, 129, 0.5);
-            transform: scale(1.05);
-        }
-        
-        .deliverable-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(to right, transparent, rgba(16, 185, 129, 0.5), transparent);
-            border-radius: 9999px;
-        }
-        
-        .bonus-section {
-            position: relative;
-            margin: 3rem 0;
-        }
-        
-        .bonus-bg {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, rgba(16, 185, 129, 0.2), rgba(74, 222, 128, 0.3), rgba(16, 185, 129, 0.2));
-            border-radius: 1.5rem;
-            filter: blur(20px);
-        }
-        
-        .bonus-border {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, rgba(16, 185, 129, 0.1), rgba(74, 222, 128, 0.1));
-            border: 2px solid rgba(16, 185, 129, 0.6);
-            border-radius: 1.5rem;
-            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.3);
-        }
-        
-        .bonus-card {
-            background: rgba(0, 0, 0, 0.7);
-            border: 2px solid rgba(16, 185, 129, 0.5);
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            transform: scale(1);
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
-        }
-        
-        .bonus-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .pricing-card {
-            background: linear-gradient(to bottom right, #111827, #000);
-            border: 2px solid #10b981;
-            border-radius: 1.5rem;
-            padding: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pricing-bg-1 {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 160px;
-            height: 160px;
-            background: rgba(16, 185, 129, 0.1);
-            border-radius: 50%;
-            filter: blur(60px);
-        }
-        
-        .pricing-bg-2 {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 128px;
-            height: 128px;
-            background: rgba(74, 222, 128, 0.05);
-            border-radius: 50%;
-            filter: blur(40px);
-        }
-        
-        .urgency-card {
-            background: linear-gradient(to bottom right, #111827, #000);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        .trust-section {
-            background: linear-gradient(to right, rgba(16, 185, 129, 0.1), rgba(74, 222, 128, 0.1));
-            border: 1px solid rgba(16, 185, 129, 0.5);
-            border-radius: 1rem;
-            padding: 2.5rem;
-        }
-        
-        .benefit-card {
-            background: linear-gradient(to bottom right, #111827, #000);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 1rem;
-            padding: 2rem;
-            height: 100%;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .benefit-card:hover {
-            border-color: rgba(16, 185, 129, 0.5);
-            transform: scale(1.05);
-        }
-        
-        .benefit-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(to right, transparent, rgba(16, 185, 129, 0.5), transparent);
-            border-radius: 9999px;
-        }
-        
-        .testimonial-card {
-            background: linear-gradient(to bottom right, #111827, #000);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 0.75rem;
-            padding: 2rem;
-        }
-        
-        .footer-disclaimer {
-            background: rgba(17, 24, 39, 0.5);
-            border: 1px solid #374151;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        @media (max-width: 767px) {
-            .text-3xl { font-size: 1.5rem; }
-            .text-4xl { font-size: 2rem; }
-            .text-5xl { font-size: 2.25rem; }
-            .text-6xl { font-size: 3rem; }
-            .text-7xl { font-size: 3.5rem; }
-            .cta-large { padding: 0.75rem 1.5rem; font-size: 1rem; }
-            .p-8 { padding: 1.5rem; }
-            .p-12 { padding: 2rem; }
-            .py-24 { padding: 3rem 0; }
-            .hero-bg::before, .hero-bg::after { display: none; }
-            .decorative-circle { display: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Acesse as ferramentas utilizadas pelos grandes players do digital. Mais de 15 ferramentas prontas para acelerar seus resultados.">
+    <meta name="keywords" content="marketing digital, ferramentas digitais, PLR, landing pages, criativos validados">
+    <meta name="author" content="Pack Dominação Digital">
+    <!-- WordPress/Elementor compatibility -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://packdominacaodigital.com/">
 </head>
-<body>
+<body class="elementor-body">
     <!-- Hero Section -->
-    <header class="hero-bg">
-        <div class="decorative-circle decorative-circle-1"></div>
-        <div class="decorative-circle decorative-circle-2"></div>
-        
-        <div class="container relative z-10 text-center" style="padding-top: 6rem;">
-            <h1 class="text-3xl md:text-5xl font-bold mb-8 gradient-text leading-tight px-2">
-                Acesse as ferramentas utilizadas pelos
-                <span class="block text-green-400" style="text-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);">grandes players do digital!</span>
-            </h1>
+    <section id="hero" class="hero-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column hero-content">
+                <div class="elementor-widget hero-title">
+                    <h1 class="elementor-heading-title">
+                        Acesse as ferramentas utilizadas pelos
+                        <span class="highlight-text">grandes players do digital!</span>
+                    </h1>
+                </div>
 
-            <div class="mb-8">
-                <div class="relative" style="max-width: 768px; margin: 0 auto;">
-                    <div class="video-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/O6VRE0rxrBo"
-                            title="Pack Dominação Digital - VSL"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                <div class="elementor-widget video-widget">
+                    <div class="video-wrapper">
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/O6VRE0rxrBo"
+                                title="Pack Dominação Digital - VSL"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mb-8">
-                <div class="inline-block" style="background: linear-gradient(to right, rgba(16, 185, 129, 0.2), rgba(74, 222, 128, 0.2)); border: 1px solid rgba(16, 185, 129, 0.5); border-radius: 1rem; padding: 1.5rem;">
-                    <div class="text-gray-400 text-sm line-through mb-2">De R$ 297,00</div>
-                    <div class="text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                        POR APENAS <span class="text-white">R$ 19,90</span>
+                <div class="elementor-widget pricing-highlight">
+                    <div class="price-box">
+                        <div class="old-price">De R$ 297,00</div>
+                        <div class="current-price">
+                            POR APENAS <span class="price-value">R$ 19,90</span>
+                        </div>
+                        <div class="discount-badge">🔥 Desconto de 93% OFF</div>
                     </div>
-                    <div class="text-green-300 font-semibold text-sm">🔥 Desconto de 93% OFF</div>
                 </div>
-            </div>
 
-            <a href="https://pay.kiwify.com.br/u0rSqn4?utm_source=organicjLj6836f8808389a36f8805c9bc&utm_campaign=&utm_medium=&utm_content=&utm_term=&subid=organicjLj6836f8808389a36f8805c9bc&sid2=&subid2=&subid3=&subid4=&subid5=&xcod=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR&sck=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="cta-button cta-large mb-8">
-                🚀 QUERO MEU PACK AGORA!
-            </a>
-
-            <p class="text-lg text-gray-300 mb-10 leading-relaxed px-2" style="max-width: 768px; margin-left: auto; margin-right: auto;">
-                Você não precisa começar do zero. <span class="text-green-400 font-bold">Use o que já funciona</span> e acelere seus resultados com +15 ferramentas prontas!
-            </p>
-
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-sm text-gray-400">
-                <div class="flex items-center gap-2">
-                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span>✅ Acesso imediato</span>
+                <div class="elementor-widget cta-widget">
+                    <a href="https://pay.kiwify.com.br/u0rSqn4?utm_source=organicjLj6836f8808389a36f8805c9bc&utm_campaign=&utm_medium=&utm_content=&utm_term=&subid=organicjLj6836f8808389a36f8805c9bc&sid2=&subid2=&subid3=&subid4=&subid5=&xcod=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR&sck=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="cta-button cta-primary">
+                        🚀 QUERO MEU PACK AGORA!
+                    </a>
                 </div>
-                <div class="flex items-center gap-2">
-                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span>🔒 Compra 100% segura</span>
+
+                <div class="elementor-widget description-widget">
+                    <p class="hero-description">
+                        Você não precisa começar do zero. <span class="text-highlight">Use o que já funciona</span> e acelere seus resultados com +15 ferramentas prontas!
+                    </p>
                 </div>
-                <div class="flex items-center gap-2">
-                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span>⚡ Download instantâneo</span>
+
+                <div class="elementor-widget trust-indicators">
+                    <div class="trust-item">
+                        <div class="trust-icon"></div>
+                        <span>✅ Acesso imediato</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon"></div>
+                        <span>🔒 Compra 100% segura</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon"></div>
+                        <span>⚡ Download instantâneo</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Deliverables Section -->
-    <section class="py-24 px-4 relative">
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent, rgba(17, 24, 39, 0.5));"></div>
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, #000, rgba(17, 24, 39, 0.5), #000);"></div>
-        
-        <div class="container-lg relative z-10">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-bold mb-8 gradient-text px-2">
-                    O que está incluso no Pack
-                </h2>
-                <p class="text-xl text-gray-300 leading-relaxed px-2" style="max-width: 768px; margin: 0 auto;">
-                    Mais de <span class="text-green-400 font-bold">15 ferramentas e arquivos</span> que normalmente custariam milhares de reais separadamente
-                </p>
-            </div>
+    <section id="deliverables" class="deliverables-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column">
+                <div class="elementor-widget section-header">
+                    <h2 class="elementor-heading-title">O que está incluso no Pack</h2>
+                    <p class="section-description">
+                        Mais de <span class="text-highlight">15 ferramentas e arquivos</span> que normalmente custariam milhares de reais separadamente
+                    </p>
+                </div>
 
-            <!-- Main Deliverables -->
-            <div class="mb-20">
-                <h3 class="text-2xl md:text-3xl font-bold text-center mb-16 text-green-400">
-                    🎯 Entregáveis Principais
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="elementor-widget">
+                    <h3 class="subsection-title">🎯 Entregáveis Principais</h3>
+                </div>
+
+                <div class="elementor-widget deliverables-grid">
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">📚</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Mais de 200 PLR's</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Produtos com direito de revenda para monetizar imediatamente</p>
+                        <div class="card-icon">📚</div>
+                        <h4 class="card-title">Mais de 200 PLR's</h4>
+                        <p class="card-description">Produtos com direito de revenda para monetizar imediatamente</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">🎯</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">54 modelos de landing page</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Páginas de alta conversão prontas para usar</p>
+                        <div class="card-icon">🎯</div>
+                        <h4 class="card-title">54 modelos de landing page</h4>
+                        <p class="card-description">Páginas de alta conversão prontas para usar</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">🎨</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Mais de 2.000 criativos validados</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Imagens e vídeos testados e aprovados</p>
+                        <div class="card-icon">🎨</div>
+                        <h4 class="card-title">Mais de 2.000 criativos validados</h4>
+                        <p class="card-description">Imagens e vídeos testados e aprovados</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">💰</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Modelos de presells premium</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Estruturas que vendem antes mesmo do produto</p>
+                        <div class="card-icon">💰</div>
+                        <h4 class="card-title">Modelos de presells premium</h4>
+                        <p class="card-description">Estruturas que vendem antes mesmo do produto</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">🔧</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Plugin clonador de páginas</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Clone qualquer página de sucesso em segundos</p>
+                        <div class="card-icon">🔧</div>
+                        <h4 class="card-title">Plugin clonador de páginas</h4>
+                        <p class="card-description">Clone qualquer página de sucesso em segundos</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">⭐</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Plugins Premium</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Ferramentas avançadas para WordPress</p>
+                        <div class="card-icon">⭐</div>
+                        <h4 class="card-title">Plugins Premium</h4>
+                        <p class="card-description">Ferramentas avançadas para WordPress</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">🖼️</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Pacote de imagens PNG</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Banco de imagens profissionais</p>
+                        <div class="card-icon">🖼️</div>
+                        <h4 class="card-title">Pacote de imagens PNG</h4>
+                        <p class="card-description">Banco de imagens profissionais</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">✍️</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Estruturas de copy</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Templates de textos que convertem</p>
+                        <div class="card-icon">✍️</div>
+                        <h4 class="card-title">Estruturas de copy</h4>
+                        <p class="card-description">Templates de textos que convertem</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">👥</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Guia para estudo de persona</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Entenda seu público-alvo como nunca</p>
+                        <div class="card-icon">👥</div>
+                        <h4 class="card-title">Guia para estudo de persona</h4>
+                        <p class="card-description">Entenda seu público-alvo como nunca</p>
                     </div>
                     <div class="deliverable-card">
-                        <div class="text-4xl mb-4">❌</div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Lista de palavras negativas</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Otimize seus anúncios com exclusões certeiras</p>
+                        <div class="card-icon">❌</div>
+                        <h4 class="card-title">Lista de palavras negativas</h4>
+                        <p class="card-description">Otimize seus anúncios com exclusões certeiras</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Bonus Section -->
-            <div class="bonus-section relative mb-16">
-                <div class="bonus-bg"></div>
-                <div class="bonus-border"></div>
-                
-                <div class="relative z-10 p-12">
-                    <div class="text-center mb-12">
-                        <div class="inline-block gradient-bg-green text-black font-bold px-8 py-4 rounded-full text-xl mb-6">
-                            🎁 BÔNUS EXCLUSIVOS
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 px-2">
-                            Receba Também Estes Bônus Incríveis
-                        </h3>
-                        <p class="text-xl text-green-300 font-semibold">
-                            Valor adicional de R$ 197,00 - GRÁTIS por tempo limitado!
-                        </p>
+                <!-- Bonus Section -->
+                <div class="elementor-widget bonus-section">
+                    <div class="bonus-header">
+                        <div class="bonus-badge">🎁 BÔNUS EXCLUSIVOS</div>
+                        <h3 class="bonus-title">Receba Também Estes Bônus Incríveis</h3>
+                        <p class="bonus-subtitle">Valor adicional de R$ 197,00 - GRÁTIS por tempo limitado!</p>
                     </div>
                     
-                    <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bonus-grid">
                         <div class="bonus-card">
-                            <div class="text-5xl mb-6">🎨</div>
-                            <h4 class="text-xl font-bold mb-4 text-green-400">Elementor Pro</h4>
-                            <p class="text-gray-300 text-base">Plugin premium para criar páginas incríveis</p>
-                            <div class="mt-6 w-full h-2 gradient-bg-green rounded-full"></div>
+                            <div class="bonus-icon">🎨</div>
+                            <h4 class="bonus-card-title">Elementor Pro</h4>
+                            <p class="bonus-card-description">Plugin premium para criar páginas incríveis</p>
                         </div>
                         <div class="bonus-card">
-                            <div class="text-5xl mb-6">📋</div>
-                            <h4 class="text-xl font-bold mb-4 text-green-400">Checklist Business Manager</h4>
-                            <p class="text-gray-300 text-base">Organize toda sua operação digital</p>
-                            <div class="mt-6 w-full h-2 gradient-bg-green rounded-full"></div>
+                            <div class="bonus-icon">📋</div>
+                            <h4 class="bonus-card-title">Checklist Business Manager</h4>
+                            <p class="bonus-card-description">Organize toda sua operação digital</p>
                         </div>
                         <div class="bonus-card">
-                            <div class="text-5xl mb-6">🔥</div>
-                            <h4 class="text-xl font-bold mb-4 text-green-400">Esteira de aquecimento</h4>
-                            <p class="text-gray-300 text-base">Para contas de anúncio performarem melhor</p>
-                            <div class="mt-6 w-full h-2 gradient-bg-green rounded-full"></div>
+                            <div class="bonus-icon">🔥</div>
+                            <h4 class="bonus-card-title">Esteira de aquecimento</h4>
+                            <p class="bonus-card-description">Para contas de anúncio performarem melhor</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Value Proposition -->
-            <div class="text-center gradient-bg-card border border-green-500" style="border-color: rgba(16, 185, 129, 0.3); border-radius: 1rem; padding: 2.5rem;">
-                <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white">
-                    Valor real deste pack: <span class="text-red-400 line-through">R$ 297,00</span>
-                </h3>
-                <h4 class="text-3xl md:text-4xl font-bold text-green-400 mb-8">
-                    Seu investimento hoje: R$ 19,90
-                </h4>
-                <p class="text-gray-300 mb-10 leading-relaxed text-base px-2" style="max-width: 512px; margin-left: auto; margin-right: auto;">
-                    Economize mais de R$ 277 e tenha acesso a tudo que precisa para dominar o marketing digital
-                </p>
-                <a href="https://pay.kiwify.com.br/u0rSqn4?utm_source=organicjLj6836f8808389a36f8805c9bc&utm_campaign=&utm_medium=&utm_content=&utm_term=&subid=organicjLj6836f8808389a36f8805c9bc&sid2=&subid2=&subid3=&subid4=&subid5=&xcod=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR&sck=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="cta-button cta-large">
-                    🚀 QUERO MEU PACK AGORA!
-                </a>
+                <!-- Value Proposition -->
+                <div class="elementor-widget value-proposition">
+                    <h3 class="value-title">
+                        Valor real deste pack: <span class="strikethrough">R$ 297,00</span>
+                    </h3>
+                    <h4 class="value-price">Seu investimento hoje: R$ 19,90</h4>
+                    <p class="value-description">
+                        Economize mais de R$ 277 e tenha acesso a tudo que precisa para dominar o marketing digital
+                    </p>
+                    <a href="https://pay.kiwify.com.br/u0rSqn4?utm_source=organicjLj6836f8808389a36f8805c9bc&utm_campaign=&utm_medium=&utm_content=&utm_term=&subid=organicjLj6836f8808389a36f8805c9bc&sid2=&subid2=&subid3=&subid4=&subid5=&xcod=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR&sck=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="cta-button cta-primary">
+                        🚀 QUERO MEU PACK AGORA!
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Product Description Section -->
-    <section class="py-20 px-4 relative">
-        <div class="absolute top-0 left-0 w-full h-20" style="background: linear-gradient(to bottom, #000, transparent);"></div>
-        
-        <div class="container">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 gradient-text px-2">
-                    Até quando vai gastar seu tempo sem precisar?
-                </h2>
-                <p class="text-xl text-gray-300 leading-relaxed px-2" style="max-width: 896px; margin: 0 auto;">
-                    Otimize o processo, <span class="text-green-400 font-semibold">elimine tarefas desnecessárias</span> e concentre-se apenas no que realmente importa para suas vendas.
-                </p>
-            </div>
+    <section id="product-description" class="product-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column">
+                <div class="elementor-widget section-header">
+                    <h2 class="elementor-heading-title">Até quando vai gastar seu tempo sem precisar?</h2>
+                    <p class="section-description">
+                        Otimize o processo, <span class="text-highlight">elimine tarefas desnecessárias</span> e concentre-se apenas no que realmente importa para suas vendas.
+                    </p>
+                </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="px-2">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-green-400">
-                        Ferramentas usadas por quem realmente vive de marketing digital
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 mt-1 animate-pulse"></div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-2">Recursos Validados no Mercado</h4>
-                                <p class="text-gray-400 text-base">Não teste às cegas. Use modelos que já geraram milhões em vendas.</p>
+                <div class="elementor-widget two-column-layout">
+                    <div class="column-content">
+                        <h3 class="column-title">Ferramentas usadas por quem realmente vive de marketing digital</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon"></div>
+                                <div class="feature-content">
+                                    <h4 class="feature-title">Recursos Validados no Mercado</h4>
+                                    <p class="feature-description">Não teste às cegas. Use modelos que já geraram milhões em vendas.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 mt-1 animate-pulse"></div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-2">Estratégias dos Grandes Players</h4>
-                                <p class="text-gray-400 text-base">Acesse as mesmas ferramentas dos maiores vendedores digitais.</p>
+                            <div class="feature-item">
+                                <div class="feature-icon"></div>
+                                <div class="feature-content">
+                                    <h4 class="feature-title">Estratégias dos Grandes Players</h4>
+                                    <p class="feature-description">Acesse as mesmas ferramentas dos maiores vendedores digitais.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-6 h-6 bg-green-500 rounded-full flex-shrink-0 mt-1 animate-pulse"></div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-2">Implementação Instantânea</h4>
-                                <p class="text-gray-400 text-base">Baixe, personalize e comece a vender no mesmo dia.</p>
+                            <div class="feature-item">
+                                <div class="feature-icon"></div>
+                                <div class="feature-content">
+                                    <h4 class="feature-title">Implementação Instantânea</h4>
+                                    <p class="feature-description">Baixe, personalize e comece a vender no mesmo dia.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="relative px-2">
-                    <div class="gradient-bg-card border border-green-500 rounded-2xl p-8 relative overflow-hidden" style="border-color: rgba(16, 185, 129, 0.3);">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-green-500 rounded-full blur-2xl" style="background: rgba(16, 185, 129, 0.1);"></div>
-                        <div class="relative z-10">
-                            <div class="text-6xl mb-4 animate-bounce">💎</div>
-                            <h4 class="text-2xl font-bold mb-4 text-green-400">Pack Dominação Digital</h4>
-                            <p class="text-gray-300 mb-6 text-base">
+                    <div class="column-sidebar">
+                        <div class="stats-card">
+                            <div class="stats-icon">💎</div>
+                            <h4 class="stats-title">Pack Dominação Digital</h4>
+                            <p class="stats-description">
                                 Você pode continuar tentando sozinho... ou aproveitar agora centenas de recursos prontos e economizar meses de trabalho.
                             </p>
-                            <div class="bg-green-500 border border-green-500 rounded-lg p-4" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5);">
-                                <div class="text-2xl font-bold text-white">+347 pessoas</div>
-                                <div class="text-green-400 text-base">já economizaram meses de trabalho</div>
+                            <div class="stats-highlight">
+                                <div class="stats-number">+347 pessoas</div>
+                                <div class="stats-text">já economizaram meses de trabalho</div>
                             </div>
                         </div>
                     </div>
@@ -804,122 +254,81 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-20 px-4 relative">
-        <div class="absolute inset-0">
-            <div class="absolute top-20 left-20 w-96 h-96 bg-green-500 rounded-full blur-3xl" style="background: rgba(16, 185, 129, 0.05);"></div>
-            <div class="absolute bottom-20 right-20 w-80 h-80 bg-green-400 rounded-full blur-3xl" style="background: rgba(74, 222, 128, 0.05);"></div>
-        </div>
-        
-        <div class="container relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 gradient-text">
-                    Benefícios que vão transformar seu negócio
-                </h2>
-                <p class="text-xl text-gray-300" style="max-width: 768px; margin: 0 auto;">
-                    Descubra como este pack vai acelerar seus resultados e economizar meses de trabalho
-                </p>
-            </div>
+    <section id="benefits" class="benefits-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column">
+                <div class="elementor-widget section-header">
+                    <h2 class="elementor-heading-title">Benefícios que vão transformar seu negócio</h2>
+                    <p class="section-description">
+                        Descubra como este pack vai acelerar seus resultados e economizar meses de trabalho
+                    </p>
+                </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="benefit-card">
-                    <div class="flex items-start gap-6">
-                        <div class="text-5xl flex-shrink-0 transition">⚡</div>
-                        <div class="flex-1">
-                            <div class="inline-block bg-green-500 border border-green-500 rounded-full px-3 py-1 text-sm text-green-400 font-semibold mb-4" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5);">
-                                Ganhe horas do seu dia
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white transition">
-                                Economize tempo
-                            </h3>
-                            <p class="text-gray-400 leading-relaxed">
-                                Pare de criar tudo do zero. Use modelos prontos e validados pelo mercado.
-                            </p>
+                <div class="elementor-widget benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-content">
+                            <div class="benefit-badge">Ganhe horas do seu dia</div>
+                            <h3 class="benefit-title">Economize tempo</h3>
+                            <p class="benefit-description">Pare de criar tudo do zero. Use modelos prontos e validados pelo mercado.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📈</div>
+                        <div class="benefit-content">
+                            <div class="benefit-badge">Resultados comprovados</div>
+                            <h3 class="benefit-title">Copie estruturas validadas</h3>
+                            <p class="benefit-description">Acesse fórmulas que já geraram milhões em vendas para outros empreendedores.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🚀</div>
+                        <div class="benefit-content">
+                            <div class="benefit-badge">Resultados desde o dia 1</div>
+                            <h3 class="benefit-title">Ferramentas com aplicação imediata</h3>
+                            <p class="benefit-description">Baixe, customize e implemente no mesmo dia. Sem curva de aprendizado.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-content">
+                            <div class="benefit-badge">ROI garantido</div>
+                            <h3 class="benefit-title">Monetização instantânea</h3>
+                            <p class="benefit-description">PLRs prontos para revenda. Comece a lucrar imediatamente com produtos digitais.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="benefit-card">
-                    <div class="flex items-start gap-6">
-                        <div class="text-5xl flex-shrink-0 transition">📈</div>
-                        <div class="flex-1">
-                            <div class="inline-block bg-green-500 border border-green-500 rounded-full px-3 py-1 text-sm text-green-400 font-semibold mb-4" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5);">
-                                Resultados comprovados
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white transition">
-                                Copie estruturas validadas
-                            </h3>
-                            <p class="text-gray-400 leading-relaxed">
-                                Acesse fórmulas que já geraram milhões em vendas para outros empreendedores.
-                            </p>
+                <!-- Additional Benefits -->
+                <div class="elementor-widget perfect-for-section">
+                    <h3 class="perfect-for-title">🎯 Perfeito para quem quer:</h3>
+                    <div class="perfect-for-grid">
+                        <div class="perfect-for-item">
+                            <div class="bullet-point"></div>
+                            <span>Iniciar no marketing digital</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="flex items-start gap-6">
-                        <div class="text-5xl flex-shrink-0 transition">🚀</div>
-                        <div class="flex-1">
-                            <div class="inline-block bg-green-500 border border-green-500 rounded-full px-3 py-1 text-sm text-green-400 font-semibold mb-4" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5);">
-                                Resultados desde o dia 1
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white transition">
-                                Ferramentas com aplicação imediata
-                            </h3>
-                            <p class="text-gray-400 leading-relaxed">
-                                Baixe, customize e implemente no mesmo dia. Sem curva de aprendizado.
-                            </p>
+                        <div class="perfect-for-item">
+                            <div class="bullet-point"></div>
+                            <span>Escalar vendas rapidamente</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="flex items-start gap-6">
-                        <div class="text-5xl flex-shrink-0 transition">💰</div>
-                        <div class="flex-1">
-                            <div class="inline-block bg-green-500 border border-green-500 rounded-full px-3 py-1 text-sm text-green-400 font-semibold mb-4" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5);">
-                                ROI garantido
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white transition">
-                                Monetização instantânea
-                            </h3>
-                            <p class="text-gray-400 leading-relaxed">
-                                PLRs prontos para revenda. Comece a lucrar imediatamente com produtos digitais.
-                            </p>
+                        <div class="perfect-for-item">
+                            <div class="bullet-point"></div>
+                            <span>Ter múltiplas fontes de renda</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Benefits Section -->
-            <div class="mt-16 text-center">
-                <div class="trust-section">
-                    <h3 class="text-3xl font-bold mb-6 text-green-400">
-                        🎯 Perfeito para quem quer:
-                    </h3>
-                    <div class="grid md:grid-cols-3 gap-6 text-left">
-                        <div class="flex items-center gap-3">
-                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-300">Iniciar no marketing digital</span>
+                        <div class="perfect-for-item">
+                            <div class="bullet-point"></div>
+                            <span>Automatizar processos</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-300">Escalar vendas rapidamente</span>
+                        <div class="perfect-for-item">
+                            <div class="bullet-point"></div>
+                            <span>Copiar fórmulas de sucesso</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-300">Ter múltiplas fontes de renda</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-300">Automatizar processos</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-300">Copiar fórmulas de sucesso</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span class="text-gray-300">Economizar tempo e dinheiro</span>
+                        <div class="perfect-for-item">
+                            <div class="bullet-point"></div>
+                            <span>Economizar tempo e dinheiro</span>
                         </div>
                     </div>
                 </div>
@@ -928,102 +337,100 @@
     </section>
 
     <!-- Social Proof Section -->
-    <section class="py-24 px-4 relative">
-        <div class="container">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-bold mb-8 gradient-text">
-                    Usado por centenas de empreendedores com resultado
-                </h2>
-                <p class="text-xl text-gray-300 leading-relaxed" style="max-width: 768px; margin: 0 auto;">
-                    Veja o que quem já adquiriu o pack está falando sobre os resultados
-                </p>
-            </div>
+    <section id="social-proof" class="social-proof-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column">
+                <div class="elementor-widget section-header">
+                    <h2 class="elementor-heading-title">Usado por centenas de empreendedores com resultado</h2>
+                    <p class="section-description">
+                        Veja o que quem já adquiriu o pack está falando sobre os resultados
+                    </p>
+                </div>
 
-            <!-- Stats -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                <div class="stats-card">
-                    <div class="text-4xl mb-4">👥</div>
-                    <div class="text-4xl font-bold text-green-400 mb-2">347+</div>
-                    <div class="text-gray-400">Empreendedores usando</div>
+                <!-- Stats -->
+                <div class="elementor-widget stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number">347+</div>
+                        <div class="stat-label">Empreendedores usando</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-label">Nota média</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Taxa de satisfação</div>
+                    </div>
                 </div>
-                <div class="stats-card">
-                    <div class="text-4xl mb-4">⭐</div>
-                    <div class="text-4xl font-bold text-green-400 mb-2">4.9/5</div>
-                    <div class="text-gray-400">Nota média</div>
-                </div>
-                <div class="stats-card">
-                    <div class="text-4xl mb-4">✅</div>
-                    <div class="text-4xl font-bold text-green-400 mb-2">95%</div>
-                    <div class="text-gray-400">Taxa de satisfação</div>
-                </div>
-            </div>
 
-            <!-- Testimonials -->
-            <div class="grid md:grid-cols-3 gap-8 mb-20">
-                <div class="testimonial-card">
-                    <div class="flex mb-6">
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
+                <!-- Testimonials -->
+                <div class="elementor-widget testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                        </div>
+                        <p class="testimonial-text">"Em 30 dias usando as landing pages do pack, aumentei minhas conversões em 340%. Valeu cada centavo!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Carlos Silva</div>
+                            <div class="author-role">Afiliado Digital</div>
+                        </div>
                     </div>
-                    <p class="text-gray-300 mb-8 italic leading-relaxed">"Em 30 dias usando as landing pages do pack, aumentei minhas conversões em 340%. Valeu cada centavo!"</p>
-                    <div>
-                        <div class="font-semibold text-white text-lg">Carlos Silva</div>
-                        <div class="text-green-400">Afiliado Digital</div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                        </div>
+                        <p class="testimonial-text">"Os PLRs me permitiram criar 5 produtos novos em uma semana. Meu faturamento triplicou!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Marina Costa</div>
+                            <div class="author-role">Infoprodutora</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                        </div>
+                        <p class="testimonial-text">"Nunca vi um pack tão completo. Os criativos validados me economizaram milhares em testes."</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Roberto Lima</div>
+                            <div class="author-role">Empreendedor Digital</div>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="flex mb-6">
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                    </div>
-                    <p class="text-gray-300 mb-8 italic leading-relaxed">"Os PLRs me permitiram criar 5 produtos novos em uma semana. Meu faturamento triplicou!"</p>
-                    <div>
-                        <div class="font-semibold text-white text-lg">Marina Costa</div>
-                        <div class="text-green-400">Infoprodutora</div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="flex mb-6">
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                        <span class="text-green-400 text-xl">⭐</span>
-                    </div>
-                    <p class="text-gray-300 mb-8 italic leading-relaxed">"Nunca vi um pack tão completo. Os criativos validados me economizaram milhares em testes."</p>
-                    <div>
-                        <div class="font-semibold text-white text-lg">Roberto Lima</div>
-                        <div class="text-green-400">Empreendedor Digital</div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Trust Badges -->
-            <div class="trust-section">
-                <h3 class="text-2xl font-bold text-center mb-10 text-green-400">
-                    🛡️ Garantias e Segurança
-                </h3>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <div class="text-5xl mb-6">🔒</div>
-                        <h4 class="font-semibold text-white mb-4 text-xl">Compra Segura</h4>
-                        <p class="text-gray-400 leading-relaxed">Pagamento protegido e criptografado</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl mb-6">⚡</div>
-                        <h4 class="font-semibold text-white mb-4 text-xl">Acesso Imediato</h4>
-                        <p class="text-gray-400 leading-relaxed">Receba tudo por email em segundos</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl mb-6">🎯</div>
-                        <h4 class="font-semibold text-white mb-4 text-xl">Suporte Incluso</h4>
-                        <p class="text-gray-400 leading-relaxed">Tire suas dúvidas quando precisar</p>
+                <!-- Trust Badges -->
+                <div class="elementor-widget trust-badges">
+                    <h3 class="trust-title">🛡️ Garantias e Segurança</h3>
+                    <div class="trust-grid">
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon">🔒</div>
+                            <h4 class="trust-badge-title">Compra Segura</h4>
+                            <p class="trust-badge-description">Pagamento protegido e criptografado</p>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon">⚡</div>
+                            <h4 class="trust-badge-title">Acesso Imediato</h4>
+                            <p class="trust-badge-description">Receba tudo por email em segundos</p>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon">🎯</div>
+                            <h4 class="trust-badge-title">Suporte Incluso</h4>
+                            <p class="trust-badge-description">Tire suas dúvidas quando precisar</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1031,166 +438,156 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="py-20 px-4 relative">
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, #000, rgba(17, 24, 39, 0.8), #000);"></div>
-        
-        <div class="container relative z-10 text-center" style="max-width: 896px;">
-            <div class="mb-12">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 gradient-text">
-                    Oferta Especial de Lançamento
-                </h2>
-                <p class="text-xl text-gray-300" style="max-width: 768px; margin: 0 auto;">
-                    Por tempo limitado, tenha acesso ao pack completo por uma fração do valor real
-                </p>
-            </div>
+    <section id="pricing" class="pricing-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column">
+                <div class="elementor-widget section-header">
+                    <h2 class="elementor-heading-title">Oferta Especial de Lançamento</h2>
+                    <p class="section-description">
+                        Por tempo limitado, tenha acesso ao pack completo por uma fração do valor real
+                    </p>
+                </div>
 
-            <!-- Main Pricing Card -->
-            <div class="pricing-card mb-8">
-                <!-- Background Effects -->
-                <div class="pricing-bg-1"></div>
-                <div class="pricing-bg-2"></div>
-                
-                <div class="relative z-10">
-                    <!-- Badge -->
-                    <div class="inline-block gradient-bg-green text-black font-bold px-6 py-2 rounded-full mb-6">
-                        🔥 93% DE DESCONTO
-                    </div>
+                <!-- Main Pricing Card -->
+                <div class="elementor-widget pricing-card-widget">
+                    <div class="pricing-card-main">
+                        <!-- Badge -->
+                        <div class="pricing-badge">🔥 93% DE DESCONTO</div>
 
-                    <!-- Pricing -->
-                    <div class="mb-8">
-                        <div class="text-gray-400 text-xl mb-2">Valor normal do pack:</div>
-                        <div class="text-3xl text-red-400 line-through mb-4">R$ 297,00</div>
-                        
-                        <div class="text-gray-300 text-2xl mb-2">Seu investimento hoje:</div>
-                        <div class="text-7xl font-bold text-green-400 mb-4">
-                            R$ 19<sup class="text-3xl">,90</sup>
+                        <!-- Pricing -->
+                        <div class="pricing-details">
+                            <div class="pricing-label">Valor normal do pack:</div>
+                            <div class="pricing-old-value">R$ 297,00</div>
+                            
+                            <div class="pricing-current-label">Seu investimento hoje:</div>
+                            <div class="pricing-current-value">
+                                R$ 19<sup class="pricing-cents">,90</sup>
+                            </div>
+                            
+                            <div class="pricing-highlight">⚡ Menos que um lanche no shopping!</div>
                         </div>
-                        
-                        <div class="text-green-300 text-lg font-semibold">
-                            ⚡ Menos que um lanche no shopping!
+
+                        <!-- What's Included Summary -->
+                        <div class="pricing-included">
+                            <h3 class="included-title">✅ Você recebe TUDO isso:</h3>
+                            <div class="included-grid">
+                                <div class="included-item">• +200 PLRs prontos</div>
+                                <div class="included-item">• 54 Landing pages</div>
+                                <div class="included-item">• +2.000 Criativos validados</div>
+                                <div class="included-item">• Plugins premium</div>
+                                <div class="included-item">• Modelos de presells</div>
+                                <div class="included-item">• Elementor Pro</div>
+                                <div class="included-item">• Estruturas de copy</div>
+                                <div class="included-item">• E muito mais...</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- What's Included Summary -->
-                    <div class="bg-black border border-green-500 rounded-2xl p-6 mb-8" style="background: rgba(0, 0, 0, 0.5); border-color: rgba(16, 185, 129, 0.3);">
-                        <h3 class="text-xl font-bold text-white mb-4">✅ Você recebe TUDO isso:</h3>
-                        <div class="grid md:grid-cols-2 gap-2 text-left text-gray-300">
-                            <div>• +200 PLRs prontos</div>
-                            <div>• 54 Landing pages</div>
-                            <div>• +2.000 Criativos validados</div>
-                            <div>• Plugins premium</div>
-                            <div>• Modelos de presells</div>
-                            <div>• Elementor Pro</div>
-                            <div>• Estruturas de copy</div>
-                            <div>• E muito mais...</div>
+                        <!-- CTA Button -->
+                        <a href="https://pay.kiwify.com.br/u0rSqn4?utm_source=organicjLj6836f8808389a36f8805c9bc&utm_campaign=&utm_medium=&utm_content=&utm_term=&subid=organicjLj6836f8808389a36f8805c9bc&sid2=&subid2=&subid3=&subid4=&subid5=&xcod=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR&sck=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="cta-button cta-primary cta-pricing">
+                            🚀 QUERO MEU PACK AGORA!
+                        </a>
+
+                        <!-- Payment Info -->
+                        <div class="payment-info">
+                            <div class="payment-item">💳 Cartão, PIX ou Boleto • Parcelamento disponível</div>
+                            <div class="payment-item">🔒 Compra 100% segura e protegida</div>
+                            <div class="payment-item">⚡ Acesso imediato após aprovação do pagamento</div>
                         </div>
-                    </div>
-
-                    <!-- CTA Button -->
-                    <a href="https://pay.kiwify.com.br/u0rSqn4?utm_source=organicjLj6836f8808389a36f8805c9bc&utm_campaign=&utm_medium=&utm_content=&utm_term=&subid=organicjLj6836f8808389a36f8805c9bc&sid2=&subid2=&subid3=&subid4=&subid5=&xcod=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR&sck=organicjLj6836f8808389a36f8805c9bchQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="cta-button cta-large mb-6">
-                        🚀 QUERO MEU PACK AGORA!
-                    </a>
-
-                    <!-- Payment Info -->
-                    <div class="text-sm text-gray-400 space-y-2">
-                        <div>💳 Cartão, PIX ou Boleto • Parcelamento disponível</div>
-                        <div>🔒 Compra 100% segura e protegida</div>
-                        <div>⚡ Acesso imediato após aprovação do pagamento</div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Urgency Elements -->
-            <div class="grid md:grid-cols-3 gap-4 text-center">
-                <div class="urgency-card">
-                    <div class="text-2xl mb-2">⏰</div>
-                    <div class="text-sm text-gray-400">Oferta por tempo limitado</div>
-                </div>
-                <div class="urgency-card">
-                    <div class="text-2xl mb-2">🔥</div>
-                    <div class="text-sm text-gray-400">Preço pode subir a qualquer momento</div>
-                </div>
-                <div class="urgency-card">
-                    <div class="text-2xl mb-2">⚡</div>
-                    <div class="text-sm text-gray-400">Últimas unidades disponíveis</div>
+                <!-- Urgency Elements -->
+                <div class="elementor-widget urgency-grid">
+                    <div class="urgency-card">
+                        <div class="urgency-icon">⏰</div>
+                        <div class="urgency-text">Oferta por tempo limitado</div>
+                    </div>
+                    <div class="urgency-card">
+                        <div class="urgency-icon">🔥</div>
+                        <div class="urgency-text">Preço pode subir a qualquer momento</div>
+                    </div>
+                    <div class="urgency-card">
+                        <div class="urgency-icon">⚡</div>
+                        <div class="urgency-text">Últimas unidades disponíveis</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 px-4 relative">
-        <div class="container" style="max-width: 896px;">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-bold mb-8 gradient-text">
-                    Perguntas Frequentes
-                </h2>
-                <p class="text-xl text-gray-300 leading-relaxed">
-                    Tire suas principais dúvidas sobre o Pack Dominação Digital
-                </p>
-            </div>
-
-            <div class="space-y-6">
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(0)">
-                        <span>Como recebo o pack após a compra?</span>
-                        <span class="faq-toggle" id="toggle-0">+</span>
-                    </button>
-                    <div class="faq-answer" id="answer-0" style="display: none;">
-                        Após a confirmação do pagamento, você receberá automaticamente um email com todos os links de download. O acesso é imediato e vitalício.
-                    </div>
+    <section id="faq" class="faq-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column">
+                <div class="elementor-widget section-header">
+                    <h2 class="elementor-heading-title">Perguntas Frequentes</h2>
+                    <p class="section-description">
+                        Tire suas principais dúvidas sobre o Pack Dominação Digital
+                    </p>
                 </div>
 
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(1)">
-                        <span>Tem garantia?</span>
-                        <span class="faq-toggle" id="toggle-1">+</span>
-                    </button>
-                    <div class="faq-answer" id="answer-1" style="display: none;">
-                        Sim! Oferecemos 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.
+                <div class="elementor-widget faq-accordion">
+                    <div class="faq-item" data-faq="0">
+                        <button class="faq-question" onclick="toggleFAQ(0)">
+                            <span>Como recebo o pack após a compra?</span>
+                            <span class="faq-toggle" id="toggle-0">+</span>
+                        </button>
+                        <div class="faq-answer" id="answer-0">
+                            Após a confirmação do pagamento, você receberá automaticamente um email com todos os links de download. O acesso é imediato e vitalício.
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(2)">
-                        <span>Funciona para iniciantes?</span>
-                        <span class="faq-toggle" id="toggle-2">+</span>
-                    </button>
-                    <div class="faq-answer" id="answer-2" style="display: none;">
-                        Absolutamente! O pack foi criado pensando em iniciantes. Todos os arquivos são fáceis de usar e vêm com instruções simples.
+                    <div class="faq-item" data-faq="1">
+                        <button class="faq-question" onclick="toggleFAQ(1)">
+                            <span>Tem garantia?</span>
+                            <span class="faq-toggle" id="toggle-1">+</span>
+                        </button>
+                        <div class="faq-answer" id="answer-1">
+                            Sim! Oferecemos 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(3)">
-                        <span>Os PLRs podem ser revendidos?</span>
-                        <span class="faq-toggle" id="toggle-3">+</span>
-                    </button>
-                    <div class="faq-answer" id="answer-3" style="display: none;">
-                        Sim! Todos os PLRs inclusos possuem direitos de revenda, permitindo que você os venda e fique com 100% dos lucros.
+                    <div class="faq-item" data-faq="2">
+                        <button class="faq-question" onclick="toggleFAQ(2)">
+                            <span>Funciona para iniciantes?</span>
+                            <span class="faq-toggle" id="toggle-2">+</span>
+                        </button>
+                        <div class="faq-answer" id="answer-2">
+                            Absolutamente! O pack foi criado pensando em iniciantes. Todos os arquivos são fáceis de usar e vêm com instruções simples.
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(4)">
-                        <span>Preciso de conhecimento técnico?</span>
-                        <span class="faq-toggle" id="toggle-4">+</span>
-                    </button>
-                    <div class="faq-answer" id="answer-4" style="display: none;">
-                        Não! Tudo foi desenvolvido para ser usado por qualquer pessoa, mesmo sem conhecimento técnico. É só baixar, personalizar e usar.
+                    <div class="faq-item" data-faq="3">
+                        <button class="faq-question" onclick="toggleFAQ(3)">
+                            <span>Os PLRs podem ser revendidos?</span>
+                            <span class="faq-toggle" id="toggle-3">+</span>
+                        </button>
+                        <div class="faq-answer" id="answer-3">
+                            Sim! Todos os PLRs inclusos possuem direitos de revenda, permitindo que você os venda e fique com 100% dos lucros.
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(5)">
-                        <span>Por quanto tempo tenho acesso?</span>
-                        <span class="faq-toggle" id="toggle-5">+</span>
-                    </button>
-                    <div class="faq-answer" id="answer-5" style="display: none;">
-                        O acesso é vitalício! Você pode baixar os arquivos quantas vezes quiser, sem limite de tempo.
+                    <div class="faq-item" data-faq="4">
+                        <button class="faq-question" onclick="toggleFAQ(4)">
+                            <span>Preciso de conhecimento técnico?</span>
+                            <span class="faq-toggle" id="toggle-4">+</span>
+                        </button>
+                        <div class="faq-answer" id="answer-4">
+                            Não! Tudo foi desenvolvido para ser usado por qualquer pessoa, mesmo sem conhecimento técnico. É só baixar, personalizar e usar.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-faq="5">
+                        <button class="faq-question" onclick="toggleFAQ(5)">
+                            <span>Por quanto tempo tenho acesso?</span>
+                            <span class="faq-toggle" id="toggle-5">+</span>
+                        </button>
+                        <div class="faq-answer" id="answer-5">
+                            O acesso é vitalício! Você pode baixar os arquivos quantas vezes quiser, sem limite de tempo.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1198,90 +595,38 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-green-500 py-16 px-4" style="border-color: rgba(16, 185, 129, 0.3);">
-        <div class="container">
-            <!-- Disclaimer -->
-            <div class="footer-disclaimer">
-                <p class="text-gray-400 text-sm leading-relaxed mb-6 text-center">
-                    Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.
-                </p>
-                <p class="text-gray-400 text-sm leading-relaxed text-center">
-                    Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.
-                </p>
-            </div>
+    <footer id="footer" class="footer-section elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-column">
+                <!-- Disclaimer -->
+                <div class="elementor-widget footer-disclaimer">
+                    <p class="disclaimer-text">
+                        Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.
+                    </p>
+                    <p class="disclaimer-text">
+                        Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.
+                    </p>
+                </div>
 
-            <!-- Links -->
-            <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <a href="https://packdominacaodigital.com/contato/" class="text-green-400 transition" style="color: #4ade80;">
-                    Contato
-                </a>
-                <span class="text-gray-600">|</span>
-                <a href="https://packdominacaodigital.com/termos-de-uso/" class="text-green-400 transition" style="color: #4ade80;">
-                    Termos de Uso
-                </a>
-                <span class="text-gray-600">|</span>
-                <a href="https://packdominacaodigital.com/politica-de-privacidade/" class="text-green-400 transition" style="color: #4ade80;">
-                    Política de Privacidade
-                </a>
-            </div>
+                <!-- Links -->
+                <div class="elementor-widget footer-links">
+                    <a href="https://packdominacaodigital.com/contato/" class="footer-link">Contato</a>
+                    <span class="footer-separator">|</span>
+                    <a href="https://packdominacaodigital.com/termos-de-uso/" class="footer-link">Termos de Uso</a>
+                    <span class="footer-separator">|</span>
+                    <a href="https://packdominacaodigital.com/politica-de-privacidade/" class="footer-link">Política de Privacidade</a>
+                </div>
 
-            <!-- Copyright -->
-            <div class="text-center">
-                <p class="text-gray-400 text-sm">
-                    Copyright © 2024 Pack Dominação Digital. Todos os direitos reservados.
-                </p>
+                <!-- Copyright -->
+                <div class="elementor-widget footer-copyright">
+                    <p class="copyright-text">
+                        Copyright © 2024 Pack Dominação Digital. Todos os direitos reservados.
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        function toggleFAQ(index) {
-            const answer = document.getElementById('answer-' + index);
-            const toggle = document.getElementById('toggle-' + index);
-            
-            if (answer.style.display === 'none' || answer.style.display === '') {
-                answer.style.display = 'block';
-                toggle.textContent = '−';
-            } else {
-                answer.style.display = 'none';
-                toggle.textContent = '+';
-            }
-        }
-
-        // Add smooth scrolling for anchor links
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a[href^="#"]');
-            
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-
-        // Add loading animation for CTA buttons
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctaButtons = document.querySelectorAll('.cta-button');
-            
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Optional: Add loading state
-                    this.style.opacity = '0.8';
-                    setTimeout(() => {
-                        this.style.opacity = '1';
-                    }, 200);
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
